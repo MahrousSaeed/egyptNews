@@ -1,0 +1,48 @@
+
+<nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+  <div class="container nav-container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo2.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/business">اقتصاد</a>
+        </li>
+        
+        <li class="nav-item dropdown sport-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            رياضة
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item"  routerLink="/sport">الدوري المصري</a>
+            <a class="dropdown-item" routerLink="/sasports">الدوري الاماراتي</a>
+            <!-- <div class="dropdown-divider">الدوري السعودي</div> -->
+            <a class="dropdown-item" routerLink='/ensport'>الدوري الانجليزي</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/technology">تكنولوجيا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/health">الصحة</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/science">علوم</a>
+          </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="root-container">
+    <router-outlet></router-outlet>
+</div>
+<footer class="text-center pt-2 pb-2   bg-dark" >All copyrights served by mahrousSaeed &copy;</footer>

@@ -1,0 +1,33 @@
+<div class="header text-center" >
+    <h1> التكنولوجيا في مصر </h1>
+    <div class="shadow"></div>
+  </div>
+  <div class="search">
+    <div class="container">
+        <div class="form-group">
+            <label class="text-right d-block">بحث في أخبار الاقتصاد</label>
+            <input type="text" [(ngModel)]='term' name="search" placeholder="ابحث هنا" class="form-control">
+        </div>
+    </div>
+    
+  </div>
+  <div class="home-news">
+      <div class="container">
+        <div class="row p7">
+          <div *ngFor="let new of techNews|search:term" class="col-sm-6 col-md-4 col-lg-3 p7">
+              <div class="card" >
+                  <div class="card-image" style="height:169px" [style.backgroundImage]="'url(' + new.urlToImage +')'">
+                      <!-- <img *ngIf='new.urlToImage' src="{{new.urlToImage}}" class="card-img-top" alt="...">
+                      <img *ngIf='!new.urlToImage' src="assets/images/logo.png" class="card-img-top" alt="..."> -->
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{new.title}} </h5>
+                    <p class="card-text">{{new.description}}</p>
+                    <a href="{{new.url}}" target="_blank" class="btn btn-primary btn-block">شوف المزيد</a>
+                  </div>
+                </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
